@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+L:\JavaCoBan\Java Source\.metadata\.plugins\org.eclipse.jdt.core
+4021984780.index
+2079571407.index
+1865797976.index
+1696264553.index
+1639136681.index
+1076069432.index

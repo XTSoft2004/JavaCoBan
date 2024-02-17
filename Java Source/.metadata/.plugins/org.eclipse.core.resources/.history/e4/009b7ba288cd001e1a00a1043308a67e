@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Mang {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BtMang m = new BtMang();
+		//m.HienThi(10); // Hien thi thong tin 10 sinh vien
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		m.HienThi(n);
+		sc.close();
+		
+//		InfoStudent[] ListStudent = new InfoStudent[n];
+//		for(int i =0 ;i < n;i++) {
+//			System.out.println("Nhập tên sinh viên: ");
+//			String name = sc.next();
+//			String date = sc.next();
+//			String gioitinh = sc.next();
+//			double dtb = sc.nextDouble();
+//			InfoStudent info = new InfoStudent(name,date,dtb,gioitinh,m.get_xeploai(dtb));
+//			
+//			
+//		}
+		
+	}
+}

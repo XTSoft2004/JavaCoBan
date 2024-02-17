@@ -1,0 +1,19 @@
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.Random;
+
+public class BtFile {
+
+	public static void main(String[] args) {
+		FileOutputStream f = new FileOutputStream("sv.txt");
+		OutputStreamWriter o = new OutputStreamWriter(f);
+		PrintWriter w = new PrintWriter(o);
+		
+		Random r = new Random();
+		
+		BtMang 
+
+	}
+
+}
