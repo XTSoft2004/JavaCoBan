@@ -21,6 +21,8 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="quick_assist_proposal_size">
+		<item key="size.x" value="428"/>
+		<item key="size.y" value="262"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
 		<item key="pageIndex" value="3"/>

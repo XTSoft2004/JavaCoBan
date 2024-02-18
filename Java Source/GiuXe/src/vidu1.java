@@ -13,7 +13,7 @@ public class vidu1 {
 			Date dt2 = f.parse(sc.nextLine());
 			Long time = dt2.getTime() - dt1.getTime();
 			double hour = (double) time / 1000 / 60 / 60;
-			// System.out.println(hour);
+			System.out.println(hour);
 
 			System.out.println("Nhập loại xe: \n1.Xe Đạp\n2.Xe máy\n3.Xe oto\nNhập:");
 			int loaixe = sc.nextInt();

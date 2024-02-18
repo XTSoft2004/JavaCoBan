@@ -27,7 +27,7 @@ public class BtFile {
 			// TODO: handle exception
 		}
 	}
-	private void XuatDanhSach() 
+	public void XuatDanhSach() 
 	{
 		try {
 			FileInputStream f = new FileInputStream("sv.txt");
