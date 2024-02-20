@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Mang {
 
 	public static void main(String[] args) {
+		System.out.println("Hello");
 		Bai1();
 		Bai2();
 		Bai3();
