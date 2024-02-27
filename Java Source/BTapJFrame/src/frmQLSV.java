@@ -125,7 +125,7 @@ public class frmQLSV extends JFrame {
 				}
 			}
 		});
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 830, 531);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -198,7 +198,7 @@ public class frmQLSV extends JFrame {
 				String masv = JOptionPane.showInputDialog("Nhap ma sinh vien: ");
 				for(String sv : dsSV) {
 					String[] info = sv.split("[;]");
-					if(info[1].trim().toLowerCase().equals(masv.trim().toLowerCase())) {
+					if(info[0].trim().toLowerCase().equals(masv.trim().toLowerCase())) {
 						int numXoa = JOptionPane.showConfirmDialog(null, "Xoa khong may`: ");
 						if(numXoa == 0) {
 							dsSV.remove(sv);
@@ -267,7 +267,7 @@ public class frmQLSV extends JFrame {
 				for(String sv : dsSV) {
 					String[] info = sv.split("[;]");
 					for(String io : info) {
-						if(io.trim().toLowerCase().equals(search.trim().toLowerCase())) {
+						if(io.trim().toLowerCase().contains(search.trim().toLowerCase())) {
 							dsSearch.add(sv);
 							break;
 						}			
