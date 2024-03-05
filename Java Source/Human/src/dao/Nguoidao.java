@@ -1,13 +1,16 @@
 package dao;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.security.GuardedObject;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import bean.sinhvienbean;
-public class sinhviendao {
-	public ArrayList<sinhvienbean> ds = new ArrayList<sinhvienbean>();
-	public ArrayList<sinhvienbean> getsinhvien() throws Exception {
+import bean.NguoiBean;
+
+public class Nguoidao {
+	public ArrayList<NguoiBean> ds = new ArrayList<NguoiBean>();
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	public ArrayList<NguoiBean> getsinhvien() throws Exception {
 		try {
 			FileReader fr = new FileReader("sinhvien.txt");
 			BufferedReader br = new BufferedReader(fr);
@@ -16,7 +19,7 @@ public class sinhviendao {
 				if(st == null || st == "")
 					break;
 				String[] tach = st.split("[;]");
-				ds.add(new sinhvienbean(tach[0],tach[1],tach[2],Double.parseDouble(tach[3])));
+				ds.add(new NguoiBean(tach[0],Boolean.parseBoolean(tach[1]),sdf.parse(tach[2])));
 			}
 			br.close();
 		} catch (Exception e) {
@@ -26,7 +29,7 @@ public class sinhviendao {
 		return ds;
 	}
 	public void Hienthi() {
-		for(sinhvienbean sv : ds) {
+		for(NguoiBean sv : ds) {
 			System.out.println(sv.toString());
 		}
 	}

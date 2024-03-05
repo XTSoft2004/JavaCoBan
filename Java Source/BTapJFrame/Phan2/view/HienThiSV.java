@@ -9,7 +9,9 @@ public class HienThiSV {
 		try {
 			sinhvienbo svbo = new sinhvienbo();
 			svbo.getsinhvien();
-			svbo.Hienthi();
+			//svbo.Hienthi();
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace(); 
 			// TODO: handle exception

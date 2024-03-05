@@ -17,6 +17,7 @@ public class sinhvienbo {
 			System.out.println(sv.toString());
 		}
 	}
+	//public void ThemSihv
 	//Tìm sinh viên theo mã hoặc họ tên
 	//THêm, xóa, sửa, sinh viên
 	//Thông kê sinh viên đậu rớt theo khóa

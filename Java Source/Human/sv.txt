@@ -1,0 +1,3 @@
+Xuan Truong,1,22/12/2004
+Dao Thuan,1,26/4/2004
+Quang Dat,0,31/12/2004
