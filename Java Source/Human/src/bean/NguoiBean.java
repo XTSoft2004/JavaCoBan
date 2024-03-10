@@ -7,7 +7,7 @@ public class NguoiBean {
 	public String Hoten;
 	public Boolean GioiTinh;
 	public Date NgaySinh;
-	
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	public NguoiBean(String hoten, Boolean gioiTinh, Date ngaySinh) {
 		super();
 		Hoten = hoten;
@@ -46,9 +46,9 @@ public class NguoiBean {
 	@Override
 	public String toString() {
 		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			
 			String dt = sdf.format(NgaySinh);
-			return "NguoiBean [Hoten=" + Hoten + ", GioiTinh=" + GioiTinh + ", NgaySinh=" + dt + ", " + "Tuoi=" + getTuoi() + "]";
+			return Hoten + "; " + GioiTinh + "; " + dt + "; " + getTuoi(); 
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "";
@@ -56,7 +56,6 @@ public class NguoiBean {
 	}
 	
 	public int getTuoi() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		String dt = sdf.format(NgaySinh);
 		int year = Integer.parseInt(dt.split("[/]")[2]);
 		Date d = new Date(); // Ngay thang nam hien tai
