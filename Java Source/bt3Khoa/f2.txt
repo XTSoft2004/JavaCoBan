@@ -1,0 +1,2 @@
+svToan [masv=toan1, hovaten=Pham Van Thong, dm1=8.5, dm2=7.5, dm3=9.5]
+svToan [masv=toan2, hovaten=Le Van Thong, dm1=1.5, dm2=2.5, dm3=3.5]

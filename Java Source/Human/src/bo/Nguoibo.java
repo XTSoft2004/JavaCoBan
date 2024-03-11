@@ -27,16 +27,10 @@ public class Nguoibo {
 				System.out.println(sv.toString());
 		}
 	}
-	public void CountDauRot() {
-		int dau = 0,rot = 0;
-		for(NguoiBean sv : ds) {
-			if(sv instanceof Hocsinhbean) {
-				if(((Hocsinhbean) sv).getDtb() >= 5)
-					dau += 1;
-				else
-					rot += 1;
-			}
-		}
-		System.out.println("So sinh vien dau: " + dau + " rot: " + rot);
+	public String DemDauRot() {
+		return svdao.CountDauRot();
+	}
+	public ArrayList<NguoiBean> SearchNhanVien(String nameNhanVien){
+		return svdao.TimkiemNhanVien(nameNhanVien);
 	}
 }

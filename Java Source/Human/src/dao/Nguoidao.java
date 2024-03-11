@@ -111,10 +111,39 @@ public class Nguoidao {
 		
 
 	}
+	public String CountDauRot() {
+		int dau = 0,rot = 0;
+		for(NguoiBean sv : ds) {
+			if(sv instanceof Hocsinhbean) {
+				if(((Hocsinhbean) sv).getDtb() >= 5)
+					dau += 1;
+				else
+					rot += 1;
+			}
+		}
+		return "So sinh vien dau: " + dau + " rot: " + rot;
+	}
 	
 	public void Hienthi() {
+		System.out.println("Danh sách học sinh:");
 		for(NguoiBean sv : ds) {
-			System.out.println(sv.toString());
+			if(sv instanceof Hocsinhbean)
+				System.out.println(sv.toString());
 		}
+		
+		System.out.println("Danh sách nhân viên:");
+		for(NguoiBean sv : ds) {
+			if(sv instanceof NhanVienBean)
+				System.out.println(sv.toString());
+		}
+	}
+	public ArrayList<NguoiBean> TimkiemNhanVien(String NameSearch) {
+		ArrayList<NguoiBean> dsSearch = new ArrayList<NguoiBean>();
+		for( NguoiBean nb : ds) {
+			if(nb instanceof NhanVienBean && nb.getHoten().toLowerCase().trim().contains(NameSearch.toLowerCase().trim())) {
+				dsSearch.add(nb);
+			}
+		}
+		return dsSearch;
 	}
 }

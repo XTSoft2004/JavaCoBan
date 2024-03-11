@@ -34,7 +34,7 @@ public class Hocsinhbean extends NguoiBean {
 	}
 	@Override
 	public String toString() {
-		return super.toString() + maHs + "; " + tenLop + "; " + dtb; 
+		return super.toString() + maHs + ";" + tenLop + ";" + dtb; 
 	}
 	
 	

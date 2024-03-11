@@ -23,7 +23,7 @@ public class HienThiHuman {
 			// TODO: handle exception
 		}
 		nb.Hienthi();	
-		nb.CountDauRot();
+		//nb.CountDauRot();
 	}
 	
 	

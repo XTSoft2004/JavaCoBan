@@ -62,7 +62,7 @@ public class NhanVienBean extends NguoiBean {
 
 	@Override
 	public String toString() {
-		return super.toString() + manv + "; " + hsl + "; " + email + "; " + phone + "; ";
+		return super.toString() + manv + ";" + hsl + ";" + email + ";" + phone + ";";
 	}
 
 }

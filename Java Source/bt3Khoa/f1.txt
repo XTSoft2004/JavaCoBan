@@ -1,0 +1,5 @@
+svCNTT [masv=cntt1, hovaten=Nguyen Huu Hung, dm1=5.5, dm2=7.5]
+svCNTT [masv=cntt2, hovaten=Nguyen Thi Hung, dm1=5.5, dm2=3.5]
+svCNTT [masv=cntt3, hovaten=Ngo Huu Hung, dm1=2.5, dm2=3.5]
+svCNTT [masv=cntt4, hovaten=Nguyen Van Thao, dm1=9.5, dm2=7.5]
+svCNTT [masv=cntt5, hovaten=Tran Thi Lung, dm1=8.5, dm2=7.5]

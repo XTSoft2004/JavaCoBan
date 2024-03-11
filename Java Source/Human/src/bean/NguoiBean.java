@@ -48,7 +48,7 @@ public class NguoiBean {
 		try {
 			
 			String dt = sdf.format(NgaySinh);
-			return Hoten + "; " + GioiTinh + "; " + dt + "; " + getTuoi(); 
+			return Hoten + ";" + GioiTinh + ";" + dt + ";"; 
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "";
