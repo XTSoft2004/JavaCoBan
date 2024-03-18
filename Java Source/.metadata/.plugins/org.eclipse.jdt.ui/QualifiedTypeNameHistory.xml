@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="bean.Hocsinhbean"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="javax.lang.model.util.SimpleAnnotationValueVisitor14"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="bean.Sinhvienbean"/>
     <fullyQualifiedTypeName name="bean.NhanVienBean"/>
-    <fullyQualifiedTypeName name="bean.NguoiBean"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.lang.MatchException"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+    <fullyQualifiedTypeName name="javax.xml.validation.Validator"/>
+    <fullyQualifiedTypeName name="javax.xml.crypto.dsig.dom.DOMValidateContext"/>
+    <fullyQualifiedTypeName name="util.Validate"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="dao.Nguoidao"/>
     <fullyQualifiedTypeName name="bo.Nguoibo"/>
+    <fullyQualifiedTypeName name="bean.NguoiBean"/>
 </qualifiedTypeNameHistroy>
