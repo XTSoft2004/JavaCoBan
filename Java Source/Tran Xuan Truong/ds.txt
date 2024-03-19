@@ -1,0 +1,6 @@
+sv1|Tran xuan truong|9.2|4.0
+sv2|Dao thuan|6.0|7.0|2.8
+sv6|Gia hoang|4.5|9.5
+sv3|Hoang anh|2.5|10.0|7.5
+sv4|Nhat tung|9.2|7.3	
+sv5|Bao hoang|4.5|9.5
