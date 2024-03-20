@@ -1,0 +1,6 @@
+sv1;Gia Han;9.5;5.5
+sv2;Lo;6.0;7.0;2.8
+sv6;Bao duong;4.5;9.5
+sv3;Hoang anh;2.5;10.0;7.5
+sv4;Long long;9.2;7.3	
+sv5;Bao hoang;4.5;9.5
