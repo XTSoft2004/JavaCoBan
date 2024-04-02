@@ -5,6 +5,8 @@
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
+		<section name="ImportExportWizard.dialogBounds">
+		</section>
 	</section>
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wb.swing.JFrame"/>
@@ -15,5 +17,14 @@
 			<item value="org.eclipse.wb/org.eclipse.wb.rcp/org.eclipse.wb.internal.rcp.databinding"/>
 			<item value="org.eclipse.wb/org.eclipse.wb.rcp/org.eclipse.wb.rcp.jface"/>
 		</list>
+	</section>
+	<section name="PropertyDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="533"/>
+		<item key="DIALOG_Y_ORIGIN" value="154"/>
+		<item key="DIALOG_WIDTH" value="928"/>
+		<item key="DIALOG_HEIGHT" value="556"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="EditorSelectionDialog">
 	</section>
 </section>

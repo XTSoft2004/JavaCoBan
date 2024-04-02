@@ -34,8 +34,7 @@ public class Nguoidao {
 				if(tach.length == 3) {
 					ds.add(new NguoiBean(tach[0],Boolean.parseBoolean(tach[1]),sdf.parse(tach[2])));
 				}
-				else if(tach.length == 7) {
-					
+				else if(tach.length == 7) {	
 					// Kiểm tra tính hợp lệ của email và phone
 					String email = tach[5];
 					String phone = tach[6];
@@ -108,8 +107,6 @@ public class Nguoidao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-
 	}
 	public String CountDauRot() {
 		int dau = 0,rot = 0;
