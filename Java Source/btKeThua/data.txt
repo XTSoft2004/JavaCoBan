@@ -1,0 +1,9 @@
+Hoàng Thị Trang;5;10/2/2002;22T102533;2.5
+Nguyễn Văn Huy;6;25/6/2001;21T102411;3.8
+Trần Thị Hương;7;18/10/2000;21T102377;4.6
+Phạm Thị An;9;8/3/2001;22T102244;5.4
+Nguyễn Văn Long;10;23/5/2000;22T102111;8.1
+Trần Văn Bình;0;15/9/2003;22T102254;6.5;example2@gmail.com;0912345678
+Lê Thị Hương;1;5/12/2004;22T102255;8.2;example3@gmail.com;0923456789
+Phạm Văn Dũng;0;20/3/2005;22T102256;9.0;example4@gmail.com;0934567890
+Hoàng Thị Mai;1;10/8/2001;22T102257;7.3;example5@gmail.com;0945678901
