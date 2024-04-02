@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="String sql = &quot;delete NhanVien where manv = ?&quot;;"/>
 		<list key="findhistory">
+			<item value="String sql = &quot;delete NhanVien where manv = ?&quot;;"/>
 			<item value="NguoiBean[] info = sv.split(&quot;[;]&quot;);"/>
 		</list>
 	</section>

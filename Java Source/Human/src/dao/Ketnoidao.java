@@ -10,7 +10,7 @@ public class Ketnoidao {
 	public void ketnoi() throws Exception{
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		System.out.println("Da xac dinh HQTCSDL");
-		cn = DriverManager.getConnection("jdbc:sqlserver://TRUONGDESKTOP\\SQLEXPRESS:1433;databaseName=Nhom4; user=sa; password=1234");
+		cn = DriverManager.getConnection("jdbc:sqlserver://LAB405-14:1433;databaseName=Nhom4; user=sa; password=123");
 		System.out.println("Da ket noi");
 	}
 	public static void main(String[] args) {
