@@ -42,7 +42,7 @@ public class HoaDonbean {
 	@Override
 	public String toString() {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		return mahoadon + ";" + sdf.format(ngaytaohoadon);
+		return mahoadon + ";" + sdf.format(ngaytaohoadon) + ";" + idUser;
 	}
 	
 }

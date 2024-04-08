@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import bean.MatHangbean;
+import bo.Chitiethoadonbo;
 
 public class Mathangdao {
 	public Connection cn;
@@ -19,6 +20,7 @@ public class Mathangdao {
 		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
 	}
 	public ArrayList<MatHangbean> dsMathang = new ArrayList<MatHangbean>();
+	public Chitiethoadonbo cthdbo = new Chitiethoadonbo();
 	public ArrayList<MatHangbean> getDs() throws Exception{
 		dsMathang.clear();
 		String sql = "select * from Mathang";
@@ -34,22 +36,8 @@ public class Mathangdao {
 		}
 		return dsMathang;
 	}
-	public Boolean KiemtraTonTai(String mahang) throws Exception  {
-		int cnt = 0;
-		String sql = "select * from Mathang where mahang = ?";
-		PreparedStatement cmd = cn.prepareStatement(sql);
-		cmd.setString(1, mahang);
-		ResultSet rs = cmd.executeQuery();
-		while(rs.next()) {
-			cnt += 1;
-		}
-		if(cnt == 0)
-			return false;
-		else
-			return true;
-	}
 	public Boolean Themmathang(String mahang, String tenhang, Date ngaynhaphang, int soluong, double gia) throws Exception {
-		if(KiemtraTonTai(mahang))
+		if(TimkiemOneMatHang(mahang) != null)
 		{
 			System.out.println("Ma hang nay da ton tai");
 			return false;
@@ -69,7 +57,9 @@ public class Mathangdao {
 		//cn.close();
 		return true;
 	}
-	public Boolean Xoamathang(String mahang) throws Exception{
+	public Boolean Xoamathang(String mahang) throws Exception{	
+		cthdbo.XoaChiTiet_mahang(mahang);
+		
 		String sql = "delete mathang where mahang = ?";
 		PreparedStatement cmd = cn.prepareStatement(sql);
 		cmd.setString(1, mahang);

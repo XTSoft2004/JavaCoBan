@@ -40,7 +40,7 @@ public class Accountdao {
 		return false;
 	}
 	public boolean TaoTaiKhoan(String username,String password,String fullname) throws Exception{
-		if(GetAccount(username) == null)
+		if(GetAccount(username) != null)
 			return false;
 		String sql = "INSERT INTO account (username,password,fullname)"
 				+ "VALUES (?,?,?)";

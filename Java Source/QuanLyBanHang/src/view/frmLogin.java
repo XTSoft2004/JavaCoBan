@@ -57,7 +57,8 @@ public class frmLogin extends JFrame {
 	public Accountbo accBo = new Accountbo();
 	public Hoadonbo hdbo = new Hoadonbo();
 	
-	public static Accountbean Account = new Accountbean(1, "admin", "1", "Xuân Trường");
+	//public static Accountbean Account = new Accountbean(1, "admin", "1", "Xuân Trường");
+	public static Accountbean Account;
 	public frmLogin() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 345, 186);

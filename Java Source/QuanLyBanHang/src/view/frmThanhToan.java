@@ -117,6 +117,7 @@ public class frmThanhToan extends JFrame {
 			@Override
 			public void windowOpened(WindowEvent e) {
 				try {
+					setTitle("Thanh toán hóa đơn | Account: " + frmLogin.Account.fullname);
 					dsMH = mhb.getDs();
 					UpdateMatHang(dsMH);
 				} catch (Exception e2) {
@@ -163,7 +164,7 @@ public class frmThanhToan extends JFrame {
 					}
 					String mahang = dsMathang.getValueAt(id, 0).toString();
 					String soluong = JOptionPane.showInputDialog(null, "Vui lòng nhập số lượng bạn cần mua: ");
-					if(!Validate.isNumber(soluong)) {
+					if(soluong == null || soluong == "" || !Validate.isNumber(soluong)) {
 						JOptionPane.showMessageDialog(null, "Nhập số lượng không hợp lệ, vui lòng kiểm tra lại !!!");
 						return;
 					}
@@ -274,6 +275,7 @@ public class frmThanhToan extends JFrame {
 		contentPane.add(btnTimkiemgiohang);
 		
 		txtTongDonHang = new JTextField();
+		txtTongDonHang.setEnabled(false);
 		txtTongDonHang.setBounds(950, 369, 145, 20);
 		contentPane.add(txtTongDonHang);
 		txtTongDonHang.setColumns(10);
@@ -286,25 +288,28 @@ public class frmThanhToan extends JFrame {
 		btnThanhToan = new JButton("Thanh toán");
 		btnThanhToan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				try {
-					if(dsBuy == null || dsBuy.size() == 0) {
-						JOptionPane.showMessageDialog(null, "Vui lòng thêm mặt hàng cần thanh toán !!!");
-						return;
-					}
-					Boolean isTaoHoaDon = hdbo.TaoHoaDon(frmLogin.Account.getIdUser(), dsBuy);
-					if(isTaoHoaDon) {
-						JOptionPane.showMessageDialog(null, "Tạo hóa đơn thành công !!!");
-						TruSoluongDaMua();
-						UpdateMatHang(mhb.getDs());
-						dsBuy.clear(); 
-						UpdateGioHang();
-					}else {
-						JOptionPane.showMessageDialog(null, "Tạo hóa đơn thất bại !!!!");
-					}
-				} catch (Exception e2) {
-					// TODO: handle exception
-					e2.printStackTrace();
-				}		
+				int kq = JOptionPane.showConfirmDialog(null, "Bạn có lựa chọn thanh toán các mặt hàng này không ?");
+				if(kq == 0) {
+					try {
+						if(dsBuy == null || dsBuy.size() == 0) {
+							JOptionPane.showMessageDialog(null, "Vui lòng thêm mặt hàng cần thanh toán !!!");
+							return;
+						}
+						Boolean isTaoHoaDon = hdbo.TaoHoaDon(frmLogin.Account.getIdUser(), dsBuy);
+						if(isTaoHoaDon) {
+							JOptionPane.showMessageDialog(null, "Tạo hóa đơn thành công !!!");
+							TruSoluongDaMua();
+							UpdateMatHang(mhb.getDs());
+							dsBuy.clear(); 
+							UpdateGioHang();
+						}else {
+							JOptionPane.showMessageDialog(null, "Tạo hóa đơn thất bại !!!!");
+						}
+					} catch (Exception e2) {
+						// TODO: handle exception
+						e2.printStackTrace();
+					}		
+				}	
 			}
 		});
 		btnThanhToan.setBounds(433, 247, 204, 32);

@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Ketnoidao {
-	public static String serverName = "XTSOFT\\SQLEXPRESS";
+	public static String serverName = "TRUONGDESKTOP\\SQLEXPRESS";
 	public static String nameDatabase = "QuanLyBanHang";
 	public static String username = "sa";
 	public static String password = "123";

@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/view/frRegister.java=UTF-8
 encoding//src/view/frmLogin.java=UTF-8
+encoding//src/view/frmMain.java=UTF-8
 encoding//src/view/frmMatHang.java=UTF-8
 encoding//src/view/frmThanhToan.java=UTF-8
+encoding//src/view/frmThongKe.java=UTF-8
 encoding/<project>=windows-1252
 encoding/hang.txt=UTF-8

@@ -87,6 +87,12 @@ public class frmMatHang extends JFrame {
 		
 		Dsmathang.setModel(dtm);
 	}
+	public boolean isFullInfo() {
+		if(txtmahang.getText().equals("") || txttenhang.getText().equals("") || txtngaynhaphang.getText().equals(""))
+			return false;
+		else
+			return true;
+	}
 	/**
 	 * Create the frame.
 	 */
@@ -95,6 +101,7 @@ public class frmMatHang extends JFrame {
 			@Override
 			public void windowOpened(WindowEvent e) {
 				try {
+					setTitle("Quản lý mặt hàng | Account: " + frmLogin.Account.fullname);
 					UpdateMatHang(mhbo.getDs());
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
@@ -190,17 +197,19 @@ public class frmMatHang extends JFrame {
 		JButton btnRemoveMathang = new JButton("X\u00F3a");
 		btnRemoveMathang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				try {
-					String mahang = txtmahang.getText();
-					UpdateMatHang(mhbo.getDs());
-					mhbo.Xoamathang(mahang);
-					JOptionPane.showMessageDialog(null, "Xóa mặt hàng thành công !!!");
-					UpdateMatHang(mhbo.getDs());
-				} catch (Exception e2) {
-					// TODO: handle exception
-					e2.printStackTrace();
-				}
-				
+				int kq = JOptionPane.showConfirmDialog(null, "Bạn có lựa chọn xóa mặt hàng này không ?");
+				if(kq == 0) {
+					try {
+						String mahang = txtmahang.getText();
+						UpdateMatHang(mhbo.getDs());
+						mhbo.Xoamathang(mahang);
+						JOptionPane.showMessageDialog(null, "Xóa mặt hàng thành công !!!");
+						UpdateMatHang(mhbo.getDs());
+					} catch (Exception e2) {
+						// TODO: handle exception
+						e2.printStackTrace();
+					}
+				}	
 			}
 		});
 		btnRemoveMathang.setBounds(135, 221, 112, 38);
@@ -209,9 +218,13 @@ public class frmMatHang extends JFrame {
 		JButton btnAddMathang = new JButton("Th\u00EAm");
 		btnAddMathang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(!isFullInfo()) {
+					JOptionPane.showMessageDialog(null, "Vui lòng điền đầy đủ thông tin hãy kiểm tra lại !!!");
+					return;
+				}
 				try {
 					String mahang = txtmahang.getText();
-					String tenhang = txtmahang.getText();
+					String tenhang = txttenhang.getText();
 					Date ngaynhaphang = sdf.parse(txtngaynhaphang.getText());
 					if(!Validate.isDate(txtngaynhaphang.getText()))
 					{
@@ -220,9 +233,13 @@ public class frmMatHang extends JFrame {
 					}
 					int soluong = Integer.parseInt(numsoluong.getValue().toString());
 					double gia = Double.parseDouble(numgia.getValue().toString());
-					mhbo.Themmathang(mahang, tenhang, ngaynhaphang, soluong, gia);
+					Boolean isAdd =  mhbo.Themmathang(mahang, tenhang, ngaynhaphang, soluong, gia);
+					if(isAdd)
+						JOptionPane.showMessageDialog(null, "Thêm mặt hàng thành công !!!");
+					else
+						JOptionPane.showMessageDialog(null, "Thêm hàng thất bại !!!");
 					UpdateMatHang(mhbo.getDs());
-					JOptionPane.showMessageDialog(null, "Thêm mặt hàng thành công !!!");
+					
 				} catch (Exception e2) {
 					// TODO: handle exception
 					e2.printStackTrace();
@@ -236,8 +253,17 @@ public class frmMatHang extends JFrame {
 		JButton btnEditMathang = new JButton("S\u1EEDa");
 		btnEditMathang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(!isFullInfo()) {
+					JOptionPane.showMessageDialog(null, "Vui lòng điền đầy đủ thông tin hãy kiểm tra lại !!!");
+					return;
+				}
 				try {
 					String mahang = txtmahang.getText();
+					MatHangbean mhbean = mhbo.TimkiemOneMatHang(mahang);
+					if(mhbean == null) {
+						JOptionPane.showMessageDialog(null, "Mặt hàng này không tồn tại !!!");
+						return;
+					}
 					String tenhang = txtmahang.getText();
 					Date ngaynhaphang = sdf.parse(txtngaynhaphang.getText());
 					if(!Validate.isDate(txtngaynhaphang.getText()))
