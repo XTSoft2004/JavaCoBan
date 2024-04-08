@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Ketnoidao {
-	//public static Connection cn;
+	public static String serverName = "XTSOFT\\SQLEXPRESS";
+	public static String nameDatabase = "QuanLyBanHang";
+	public static String username = "sa";
+	public static String password = "123";
 	public static Connection ConnectSQL(String serverName,String nameDatabase,String username,String password){
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -20,31 +23,4 @@ public class Ketnoidao {
 		}
 		
 	}
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		try {
-//			// b1 ket noi
-//			Ketnoidao kn = new Ketnoidao();
-//			kn.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");
-//			// b2 tao cau lenh sql
-//			String sql = "delete NhanVien where manv = ?";
-//			// b3 chay cau lenh PreparedStatement
-//			PreparedStatement cmd = kn.cn.prepareStatement(sql);
-//			cmd.setString(1, "nv5");
-//			// b4 thuc ti cau lenh
-//			ResultSet rs = cmd.executeQuery();
-//			while(rs.next()) {
-//				System.out.println(rs.getString("manv"));
-//				System.out.println(rs.getString("hoten"));
-//				System.out.println(rs.getBoolean("gioitinh"));
-//				System.out.println(rs.getDouble("hsl"));
-//			}
-//			rs.close();
-//			
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//		}
-//	}
-
 }

@@ -12,7 +12,7 @@ public class Accountdao {
 	public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	public Accountdao() {
 		super();
-		cn = Ketnoidao.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");	
+		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
 	} 
 	public Accountbean GetAccount(String username) throws Exception {
 		String sql = "select * from account where username = ?";

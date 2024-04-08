@@ -16,7 +16,7 @@ public class Mathangdao {
 	public SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	public Mathangdao() {
 		super();
-		cn = Ketnoidao.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");
+		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
 	}
 	public ArrayList<MatHangbean> dsMathang = new ArrayList<MatHangbean>();
 	public ArrayList<MatHangbean> getDs() throws Exception{

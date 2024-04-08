@@ -11,7 +11,7 @@ public class Chitiethoadondao {
 	public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	public Chitiethoadondao() {
 		super();
-		cn = Ketnoidao.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");	
+		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
 	}
 	public Boolean ThemChiTiet(int mahoadon, String mahang, int soluongmua) throws Exception {
 		

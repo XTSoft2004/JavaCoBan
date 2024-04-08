@@ -172,12 +172,23 @@ public class frmThanhToan extends JFrame {
 						JOptionPane.showMessageDialog(null, "Vui lòng chọn số lượng lớn hơn 0, vui lòng kiểm tra lại !!");
 						return;
 					}
+					
+					// Kiểm tra xem đủ số lượng hàng cần thiết không
 					MatHangbean mhbean = mhb.TimkiemOneMatHang(mahang);
 					if(mhbean.getSoluong() - sl < 0) {
 						JOptionPane.showMessageDialog(null, "Không đủ số lượng để bạn mua, bạn có thể giảm số lượng hoặc chọn sản phẩm khác !!!");
 						return;
 					}
+
+					// Xóa số lượng ở khi mua
+					for(MatHangbean mh : dsMH) {
+						if(mh.getMahang().trim().toLowerCase().equals(mahang.trim().toLowerCase())) {
+							mh.setSoluong(mh.getSoluong() - sl);
+							break;
+						}
+					}
 					
+					// Kiểm tra xem đã tồn tại mặt hàng này trong kho không ?
 					boolean isExist = false;
 					for(ChiTietHoaDonbean chitiet : dsBuy) {
 						if(chitiet.getMahang().trim().toLowerCase().equals(mahang.trim().toLowerCase())) {
@@ -188,6 +199,8 @@ public class frmThanhToan extends JFrame {
 					}
 					if(!isExist)
 						dsBuy.add(new ChiTietHoaDonbean(-1, -1, mahang, sl));
+					
+					UpdateMatHang(dsMH);
 					UpdateGioHang();
 				} catch (Exception e2) {
 					// TODO: handle exception
@@ -209,6 +222,7 @@ public class frmThanhToan extends JFrame {
 						return;
 					}
 					String mahang = GioHang.getValueAt(id, 0).toString();
+					int soluong = Integer.parseInt(GioHang.getValueAt(id, 1).toString());
 					for(ChiTietHoaDonbean chitiet : dsBuy) {
 						if(chitiet.getMahang().trim().toLowerCase().equals(mahang.trim().toLowerCase()))
 						{
@@ -216,6 +230,15 @@ public class frmThanhToan extends JFrame {
 							break;
 						}
 					}
+					
+					// Xóa mặt hàng tại giỏ hàng thêm lại vào kho
+					for(MatHangbean mh : dsMH) {
+						if(mh.getMahang().trim().toLowerCase().equals(mahang.trim().toLowerCase())) {
+							mh.setSoluong(mh.getSoluong() + soluong);
+							break;
+						}
+					}
+					UpdateMatHang(dsMH);
 					UpdateGioHang();
 					JOptionPane.showMessageDialog(null, "Đã xóa thành công ra khỏi giỏ hàng !!!");
 				} catch (Exception e2) {
@@ -264,9 +287,17 @@ public class frmThanhToan extends JFrame {
 		btnThanhToan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
+					if(dsBuy == null || dsBuy.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Vui lòng thêm mặt hàng cần thanh toán !!!");
+						return;
+					}
 					Boolean isTaoHoaDon = hdbo.TaoHoaDon(frmLogin.Account.getIdUser(), dsBuy);
 					if(isTaoHoaDon) {
 						JOptionPane.showMessageDialog(null, "Tạo hóa đơn thành công !!!");
+						TruSoluongDaMua();
+						UpdateMatHang(mhb.getDs());
+						dsBuy.clear(); 
+						UpdateGioHang();
 					}else {
 						JOptionPane.showMessageDialog(null, "Tạo hóa đơn thất bại !!!!");
 					}
@@ -283,7 +314,7 @@ public class frmThanhToan extends JFrame {
 		try {
 			for(ChiTietHoaDonbean chitiet : dsBuy) {
 				MatHangbean mh = mhb.TimkiemOneMatHang(chitiet.getMahang());
-				mhb.Chinhsuamathang(mh.getMahang(), mh.getTenhang(), mh.getNgaynhaphang(), mh.getSoluong() - chitiet.getSoluongmua(), mh.getGia());
+				mhb.Chinhsuamathang(mh.getMahang(), mh.getTenhang(), mh.getNgaynhaphang(), mh.getSoluong(), mh.getGia());
 			}
 
 		} catch (Exception e) {

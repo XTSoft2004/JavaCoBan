@@ -17,7 +17,7 @@ public class Hoadondao {
 	public Chitiethoadondao cthoadondao = new Chitiethoadondao();
 	public Hoadondao() {
 		super();
-		cn = Ketnoidao.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");
+		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
 	}
 	public Boolean TaoHoaDon(int idUser,ArrayList<ChiTietHoaDonbean> dsMathang) throws Exception {
 		String sql = "INSERT INTO hoadon (ngaytaohoadon,idUser)\r\n"
@@ -40,10 +40,11 @@ public class Hoadondao {
 		String sql = "select * from hoadon";
 		PreparedStatement cmd = cn.prepareStatement(sql);
 		ResultSet rs = cmd.executeQuery();
+		int id = -1;
 		while(rs.next()) {
-			return rs.getInt("mahoadon");
+			id = rs.getInt("mahoadon");
 		}
-		return -1;
+		return id;
 	}
 	public void TaoDanhSachMatHang(int mahoadon,ArrayList<ChiTietHoaDonbean> dsChitiet) throws Exception {
 		for(ChiTietHoaDonbean mh : dsChitiet) {
