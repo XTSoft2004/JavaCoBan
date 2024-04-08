@@ -16,7 +16,15 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.awt.event.ActionEvent;
+import javax.swing.JCheckBox;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class frmLogin extends JFrame {
 
@@ -26,6 +34,7 @@ public class frmLogin extends JFrame {
 	private JTextField txtusername;
 	private JButton btnDangNhap;
 	private JButton btnDangKi;
+	private JCheckBox cbLuuThongTin;
 
 	/**
 	 * Launch the application.
@@ -56,12 +65,47 @@ public class frmLogin extends JFrame {
 	}
 	public Accountbo accBo = new Accountbo();
 	public Hoadonbo hdbo = new Hoadonbo();
-	
+	public void SaveInfo() {
+		try {
+			File f = new File("D:\\testout.txt");
+			FileWriter fw = new FileWriter("saveinfo.txt");
+			PrintWriter pw = new PrintWriter(fw);
+			pw.print(txtusername.getText() + "|" + txtpassword.getText());
+			fw.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+	}
+	public void LoadInfo() {
+		try {
+			File f = new File("saveinfo.txt");
+			if(!f.exists())
+				return;
+			FileReader fr = new FileReader("saveinfo.txt");
+			BufferedReader br = new BufferedReader(fr);
+			String st = br.readLine();
+			String[] che = st.split("[|]");
+			txtusername.setText(che[0]);
+			txtpassword.setText(che[1]);
+			br.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
 	//public static Accountbean Account = new Accountbean(1, "admin", "1", "Xuân Trường");
 	public static Accountbean Account;
 	public frmLogin() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowOpened(WindowEvent e) {
+				LoadInfo();
+			}
+		});
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 345, 186);
+		setBounds(100, 100, 345, 214);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -104,7 +148,10 @@ public class frmLogin extends JFrame {
 						frmMain frMain = new frmMain();
 						frMain.setVisible(true);
 						setVisible(false);				
-						Account = accBo.GetAccount(username);					
+						Account = accBo.GetAccount(username);		
+						if(cbLuuThongTin.isSelected())
+							SaveInfo();
+						
 						//Join from gốc
 					}
 				} catch (Exception e2) {
@@ -114,7 +161,7 @@ public class frmLogin extends JFrame {
 				
 			}
 		});
-		btnDangNhap.setBounds(52, 97, 108, 38);
+		btnDangNhap.setBounds(49, 123, 108, 38);
 		contentPane.add(btnDangNhap);
 		
 		btnDangKi = new JButton("\u0110\u0103ng k\u00ED");
@@ -125,7 +172,11 @@ public class frmLogin extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnDangKi.setBounds(167, 97, 108, 38);
+		btnDangKi.setBounds(164, 123, 108, 38);
 		contentPane.add(btnDangKi);
+		
+		cbLuuThongTin = new JCheckBox("Lưu mật khẩu");
+		cbLuuThongTin.setBounds(28, 96, 129, 23);
+		contentPane.add(cbLuuThongTin);
 	}
 }
