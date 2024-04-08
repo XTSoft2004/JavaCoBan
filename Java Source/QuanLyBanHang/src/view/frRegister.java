@@ -54,6 +54,7 @@ public class frRegister extends JFrame {
 	}
 	public Accountbo accBo = new Accountbo();
 	public frRegister() {
+		setTitle("Đăng kí");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 317, 189);
 		contentPane = new JPanel();

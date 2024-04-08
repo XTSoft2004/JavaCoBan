@@ -149,7 +149,7 @@ public class frmThongKe extends JFrame {
 				try {
 					int id = HoaDon.getSelectedRow();
 					int mahoadon = Integer.parseInt(HoaDon.getValueAt(id, 0).toString());
-					System.out.println(mahoadon);
+					//System.out.println(mahoadon);
 					ArrayList<ChiTietHoaDonbean> dschitiet = chitietbo.getDs_mahoadon(mahoadon);
 					UpdateChiTietHoaDon(dschitiet);
 				} catch (Exception e2) {

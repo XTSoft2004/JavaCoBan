@@ -17,7 +17,7 @@ public class Mathangdao {
 	public SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	public Mathangdao() {
 		super();
-		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
+		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.username,Ketnoidao.password);	
 	}
 	public ArrayList<MatHangbean> dsMathang = new ArrayList<MatHangbean>();
 	public Chitiethoadonbo cthdbo = new Chitiethoadonbo();

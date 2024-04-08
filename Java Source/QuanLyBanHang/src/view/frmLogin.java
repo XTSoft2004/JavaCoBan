@@ -98,6 +98,7 @@ public class frmLogin extends JFrame {
 	//public static Accountbean Account = new Accountbean(1, "admin", "1", "Xuân Trường");
 	public static Accountbean Account;
 	public frmLogin() {
+		setTitle("Đăng nhập");
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowOpened(WindowEvent e) {

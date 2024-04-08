@@ -16,8 +16,6 @@
     <fullyQualifiedTypeName name="dao.Nhanviendao"/>
     <fullyQualifiedTypeName name="bean.Nhanvienbean"/>
     <fullyQualifiedTypeName name="bo.Nhanvienbo"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="dao.Ketnoidao"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
@@ -36,7 +34,6 @@
     <fullyQualifiedTypeName name="view.frmMatHang"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="dao.Hoadondao"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -44,7 +41,6 @@
     <fullyQualifiedTypeName name="dao.Chitiethoadondao"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="bo.Chitiethoadonbo"/>
     <fullyQualifiedTypeName name="bean.ChiTietHoaDonbean"/>
     <fullyQualifiedTypeName name="dao.Mathangdao"/>
     <fullyQualifiedTypeName name="view.frmThongKe"/>
@@ -53,11 +49,15 @@
     <fullyQualifiedTypeName name="bean.MatHangbean"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="bean.HoaDonbean"/>
-    <fullyQualifiedTypeName name="view.frmLogin"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.lang.FdLibm.Cbrt"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="bo.Chitiethoadonbo"/>
+    <fullyQualifiedTypeName name="dao.Ketnoidao"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="view.frmLogin"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

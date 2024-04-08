@@ -16,10 +16,10 @@ public class Demo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			Connection cn = Ketnoidao.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");
+			//Connection cn = Ketnoidao.ConnectSQL("TRUONGDESKTOP\\SQLEXPRESS","QuanLyBanHang","sa","123");
 			
-			Mathangdao mhd = new Mathangdao();
-			System.out.println(mhd.Themmathang("mh9", "Xuan mai", sdf.parse("22/12/2004"), 10, 20));
+			//Mathangdao mhd = new Mathangdao();
+			//System.out.println(mhd.Themmathang("mh9", "Xuan mai", sdf.parse("22/12/2004"), 10, 20));
 			
 						
 //			String sql = "delete mathang where mahang = 'mh5'";

@@ -13,7 +13,7 @@ public class Chitiethoadondao {
 	public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	public Chitiethoadondao() {
 		super();
-		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.nameDatabase,Ketnoidao.username,Ketnoidao.password);	
+		cn = Ketnoidao.ConnectSQL(Ketnoidao.serverName,Ketnoidao.username,Ketnoidao.password);	
 	}
 	public ArrayList<ChiTietHoaDonbean> dsChitiet = new ArrayList<ChiTietHoaDonbean>();
 	
