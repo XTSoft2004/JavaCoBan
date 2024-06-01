@@ -1,0 +1,3 @@
+123|Pin AAA|viên|2000|5
+124|Vở Hồng Hà 100 trang|quyển|15000|1
+1|Dòng sản phẩm lỗi|kg|-12.5|3
