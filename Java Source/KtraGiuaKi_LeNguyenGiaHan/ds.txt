@@ -1,0 +1,5 @@
+sv1;Xuan Truong;8.5;2.5
+sv2;Ninh Duong;9.2;3.5
+sv4;Hong Mai;1.5;9.5
+sv5;Truong;5;7.5;9.0
+sv7;Ninh Hong;2.5;9.5;8.9
