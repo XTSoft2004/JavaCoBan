@@ -1,0 +1,6 @@
+nv1;Nguyen Van A;chinhthuc;5.5
+nv2;Nguyen Van B;chinhthuc;4.0
+nv3;Nguyen Thi C;hopdong;2.5
+nv4;Nguyen Van D;chihthuc;2.5
+gv1;Le Van A;chinhthuc;3.0;100000.0
+gv2;Hoang Thi B;hopdong;3.0;50000.0
