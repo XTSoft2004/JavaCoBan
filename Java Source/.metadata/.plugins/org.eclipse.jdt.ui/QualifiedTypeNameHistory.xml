@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="dao.Accountdao"/>
     <fullyQualifiedTypeName name="bo.Accountbo"/>
     <fullyQualifiedTypeName name="view.frRegister"/>
     <fullyQualifiedTypeName name="view.frmThanhToan"/>
@@ -25,21 +23,15 @@
     <fullyQualifiedTypeName name="view.frmLogin"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="dao.Tindao"/>
-    <fullyQualifiedTypeName name="view.frmMain"/>
     <fullyQualifiedTypeName name="bo.Tinbo"/>
-    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
     <fullyQualifiedTypeName name="bean.TinAbean"/>
     <fullyQualifiedTypeName name="bean.TinBbean"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="bean.Tinbean"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="javax.annotation.processing.Filer"/>
-    <fullyQualifiedTypeName name="bean.Giangvienbean"/>
     <fullyQualifiedTypeName name="java.security.GuardedObject"/>
-    <fullyQualifiedTypeName name="bean.Nguoibean"/>
-    <fullyQualifiedTypeName name="bean.Nhanvienbean"/>
     <fullyQualifiedTypeName name="java.beans.beancontext.BeanContextSupport"/>
     <fullyQualifiedTypeName name="bean.Khachhangbean"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
@@ -48,7 +40,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="dao.Khachhangdao"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="bo.Khachhangbo"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="util.Validate"/>
@@ -57,7 +48,16 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="bean.KHSIM"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="dao.Ketnoidao"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="dao.Ketnoidao"/>
+    <fullyQualifiedTypeName name="dao.Nguoidao"/>
+    <fullyQualifiedTypeName name="bean.Nguoibean"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+    <fullyQualifiedTypeName name="bean.Giangvienbean"/>
+    <fullyQualifiedTypeName name="view.frmMain"/>
+    <fullyQualifiedTypeName name="bo.Nguoibo"/>
+    <fullyQualifiedTypeName name="bean.Nhanvienbean"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>
