@@ -1,0 +1,5 @@
+DD0001;Samsung J7;Samsung;100.0;Hong
+DD0002;Samsung J9;Samsung;1500.0;Den
+CD0001;Vsmart Pro;Vsmart;50.0;10/03/2024;128 GB
+CD0002;Vsmart Pro 1;Vsmart;1550.0;15/03/2024;64 GB
+CD0003;Vsmart Pro 3;Vsmart;10.0;05/03/2024;64 GB
